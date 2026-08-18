@@ -63,8 +63,10 @@
     .project .meta{position:relative;z-index:3}.project b{display:block;font-size:20px}.project small{color:#bdc5cb}
     .project:before{content:"";position:absolute;inset:15% 12% 32%;border:6px solid #414a51;transform:skewY(-6deg);opacity:.8}
     .project.big:before{display:none}
-    .project.big:after{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(transparent,rgba(8,11,13,.92));z-index:2;pointer-events:none}
+    .project.has-image:before{display:none}
+    .project.big:after,.project.has-image:after{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(transparent,rgba(8,11,13,.92));z-index:2;pointer-events:none}
     .portfolio-product{position:absolute;z-index:1;left:3%;top:3%;width:94%;height:84%;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(0,0,0,.38))}
+    .portfolio-photo{position:absolute;z-index:1;inset:0;width:100%;height:100%;object-fit:cover}
 
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
     .step{padding:8px 22px 0 0}
@@ -166,7 +168,10 @@
         <div class="project"><div class="meta"><b>Suporte para vinho</b><small>Aço · Série pequena</small></div></div>
         <div class="project"><div class="meta"><b>Consola industrial</b><small>Aço + madeira</small></div></div>
         <div class="project"><div class="meta"><b>Suporte para vasos</b><small>Interior / exterior</small></div></div>
-        <div class="project"><div class="meta"><b>Projeto por medida</b><small>Desenho e fabrico</small></div></div>
+        <div class="project has-image">
+          <img class="portfolio-photo" src="./portao-projeto.webp?v=1" alt="Portão em aço preto e madeira — projeto por medida">
+          <div class="meta"><b>Projeto por medida</b><small>Desenho e fabrico</small></div>
+        </div>
       </div>
     </div>
   </section>
