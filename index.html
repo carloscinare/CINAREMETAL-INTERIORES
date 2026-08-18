@@ -59,10 +59,12 @@
     .work{background:#0e1317;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:250px 250px;gap:16px}
     .project{position:relative;border-radius:18px;overflow:hidden;border:1px solid #2a3137;background:linear-gradient(145deg,#1c2329,#101417);padding:24px;display:flex;align-items:end}
-    .project.big{grid-row:span 2;background:linear-gradient(145deg,#261c14,#101315)}
-    .project .meta{position:relative;z-index:2}.project b{display:block;font-size:20px}.project small{color:#bdc5cb}
+    .project.big{grid-row:span 2;background:linear-gradient(145deg,#171b1f,#0d1114)}
+    .project .meta{position:relative;z-index:3}.project b{display:block;font-size:20px}.project small{color:#bdc5cb}
     .project:before{content:"";position:absolute;inset:15% 12% 32%;border:6px solid #414a51;transform:skewY(-6deg);opacity:.8}
-    .project.big:before{inset:18% 14% 28%;border-top-color:#a86e36}
+    .project.big:before{display:none}
+    .project.big:after{content:"";position:absolute;left:0;right:0;bottom:0;height:38%;background:linear-gradient(transparent,rgba(8,11,13,.92));z-index:2;pointer-events:none}
+    .portfolio-product{position:absolute;z-index:1;left:3%;top:3%;width:94%;height:84%;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(0,0,0,.38))}
 
     .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
     .step{padding:8px 22px 0 0}
@@ -82,6 +84,7 @@
       .cards{grid-template-columns:1fr}
       .gallery{grid-template-columns:1fr;grid-template-rows:none}
       .project,.project.big{min-height:260px;grid-row:auto}
+      .portfolio-product{height:78%}
       .steps{grid-template-columns:1fr 1fr}
       .cta{flex-direction:column;align-items:flex-start}
     }
@@ -156,7 +159,10 @@
         <p>Estas caixas seriam substituídas pelas fotografias reais dos teus projetos.</p>
       </div>
       <div class="gallery">
-        <div class="project big"><div class="meta"><b>Mesa de centro</b><small>Aço lacado + madeira maciça</small></div></div>
+        <div class="project big">
+          <img class="portfolio-product" src="./mesa-centro.png?v=1" alt="Mesa de centro CINARÉ">
+          <div class="meta"><b>Mesa de centro</b><small>Aço lacado + madeira maciça</small></div>
+        </div>
         <div class="project"><div class="meta"><b>Suporte para vinho</b><small>Aço · Série pequena</small></div></div>
         <div class="project"><div class="meta"><b>Consola industrial</b><small>Aço + madeira</small></div></div>
         <div class="project"><div class="meta"><b>Suporte para vasos</b><small>Interior / exterior</small></div></div>
