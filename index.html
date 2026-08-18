@@ -30,12 +30,9 @@
     .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
     h1{font-size:clamp(44px,6vw,78px);line-height:1.02;letter-spacing:-.045em;margin:14px 0 22px;max-width:760px}
     .lead{font-size:18px;color:var(--muted);max-width:650px;margin:0 0 30px}.actions{display:flex;gap:12px;flex-wrap:wrap}
-    .hero-art{position:relative;min-height:470px;background:linear-gradient(145deg,#171c21,#0f1215);border:1px solid #262d34;border-radius:24px;overflow:hidden;box-shadow:0 35px 80px rgba(0,0,0,.35)}
+    .hero-art{position:relative;min-height:470px;background:linear-gradient(145deg,#171c21,#0f1215);border:1px solid #262d34;border-radius:24px;overflow:hidden;box-shadow:0 35px 80px rgba(0,0,0,.35);display:flex;align-items:center;justify-content:center;padding:28px}
     .hero-art .grid{position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px}
-    .table{position:absolute;left:16%;right:14%;bottom:16%;height:35%;border:8px solid #2e353b;border-top-color:#b47b3c;background:linear-gradient(#4d321f,#2b1d14);box-shadow:0 20px 55px rgba(0,0,0,.45)}
-    .table:before,.table:after{content:"";position:absolute;top:100%;width:8px;height:90px;background:#30373d}.table:before{left:5%}.table:after{right:5%}
-    .spark{position:absolute;width:5px;height:5px;background:var(--accent2);border-radius:50%;box-shadow:0 0 20px var(--accent2)}
-    .s1{left:20%;top:22%}.s2{left:33%;top:16%}.s3{right:23%;top:26%}.s4{right:35%;top:14%}
+    .hero-product{position:relative;z-index:2;width:108%;max-width:none;height:auto;object-fit:contain;filter:drop-shadow(0 24px 36px rgba(0,0,0,.48));transform:translateY(6px)}
     section{padding:92px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
     h2{font-size:clamp(30px,4vw,48px);line-height:1.1;letter-spacing:-.035em;margin:8px 0}.section-head p{max-width:520px;color:var(--muted);margin:0}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;min-height:230px}
@@ -71,7 +68,7 @@
       <p class="lead">Serralharia ligeira, mobiliário industrial e soluções por medida para casas, garagens e espaços comerciais.</p>
       <div class="actions"><a class="btn primary" href="#contacto">Pedir orçamento</a><a class="btn ghost" href="#trabalhos">Ver trabalhos</a></div>
     </div>
-    <div class="hero-art" aria-label="Ilustração de mesa industrial"><div class="grid"></div><div class="table"></div><i class="spark s1"></i><i class="spark s2"></i><i class="spark s3"></i><i class="spark s4"></i></div>
+    <div class="hero-art" aria-label="Mesa de centro industrial CINARÉ"><div class="grid"></div><img class="hero-product" src="images/mesa-centro.png" alt="Mesa de centro CINARÉ com estrutura metálica preta e tampo em madeira queimada e envernizada"></div>
   </div></section>
 
   <section id="servicos"><div class="wrap">
