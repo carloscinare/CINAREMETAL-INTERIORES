@@ -1,151 +1,203 @@
 <!doctype html>
 <html lang="pt-PT">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="CINARÉ Metal & Interiores — mobiliário industrial, serralharia e soluções por medida.">
-  <title>CINARÉ Metal & Interiores</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="CINARÉ Metal & Interiores — serralharia, mobiliário e projetos por medida." />
+  <title>CINARÉ — Metal & Interiores</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     :root{
-      --bg:#0b0d0f;--bg2:#101419;--card:#14191e;--line:#263039;
-      --text:#f5f7f9;--muted:#aab4bc;--gold:#e0a63a;--gold2:#f3bd58;
-      --max:1200px;
+      --bg:#090c0f;
+      --panel:#11161b;
+      --panel-2:#141a20;
+      --line:#242c33;
+      --text:#f3f5f7;
+      --muted:#a9b3bb;
+      --accent:#d5a246;
+      --accent-2:#efc062;
+      --max:1180px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.55}
-    a{text-decoration:none;color:inherit}
-    .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
-    header{position:sticky;top:0;z-index:20;background:rgba(11,13,15,.88);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.06)}
-    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:26px}
-    .brand{font-weight:900;letter-spacing:.14em;font-size:19px}.brand b{color:var(--gold)}
+    body{margin:0;font-family:Inter,system-ui,sans-serif;background:var(--bg);color:var(--text);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(var(--max), calc(100% - 36px));margin:auto}
+
+    header{position:sticky;top:0;z-index:10;background:rgba(9,12,15,.82);backdrop-filter:blur(12px);border-bottom:1px solid rgba(255,255,255,.06)}
+    nav{height:74px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+    .brand{font-size:21px;font-weight:800;letter-spacing:.16em}.brand span{color:var(--accent)}
     .navlinks{display:flex;gap:26px;color:#c8d0d6;font-size:14px}.navlinks a:hover{color:#fff}
-    .btn{display:inline-flex;align-items:center;justify-content:center;padding:13px 19px;border-radius:10px;font-weight:800;font-size:14px;border:1px solid transparent;transition:.2s}
-    .btn.primary{background:var(--gold);color:#15110a}.btn.primary:hover{background:var(--gold2);transform:translateY(-1px)}
-    .btn.secondary{background:#12171b;border-color:#323c45}.btn.secondary:hover{border-color:#596674}
+
+    .btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 18px;border-radius:10px;font-size:14px;font-weight:700;border:1px solid transparent;transition:.2s}
+    .btn.primary{background:var(--accent);color:#171209}.btn.primary:hover{background:var(--accent-2);transform:translateY(-1px)}
+    .btn.ghost{background:#10151a;border-color:#303841;color:#fff}.btn.ghost:hover{border-color:#59636d}
+
     .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
-    .hero:after{content:"";position:absolute;width:650px;height:650px;border-radius:50%;right:-220px;top:-250px;background:radial-gradient(circle,rgba(224,166,58,.15),transparent 68%);pointer-events:none}
-    .hero-grid{min-height:700px;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:70px;padding:84px 0}
-    .eyebrow{font-size:12px;text-transform:uppercase;letter-spacing:.17em;font-weight:900;color:var(--gold)}
-    h1{font-size:clamp(48px,6vw,78px);line-height:1.02;letter-spacing:-.045em;margin:15px 0 24px;max-width:720px}
-    .lead{font-size:18px;color:var(--muted);max-width:650px;margin:0 0 30px}
+    .hero:before{content:"";position:absolute;right:-160px;top:-140px;width:540px;height:540px;border-radius:50%;background:radial-gradient(circle,rgba(213,162,70,.12),transparent 72%)}
+    .hero-grid{display:grid;grid-template-columns:1.02fr .98fr;gap:62px;align-items:center;padding:92px 0}
+    .eyebrow{color:var(--accent);font-weight:700;letter-spacing:.16em;text-transform:uppercase;font-size:12px}
+    h1{font-size:clamp(46px,6vw,82px);line-height:1.02;letter-spacing:-.05em;margin:14px 0 24px;max-width:760px}
+    .lead{font-size:18px;color:var(--muted);max-width:620px;margin:0 0 32px}
     .actions{display:flex;gap:12px;flex-wrap:wrap}
-    .product-stage{position:relative;min-height:480px;border-radius:24px;border:1px solid #2b343d;background:#11161a;overflow:hidden;box-shadow:0 30px 75px rgba(0,0,0,.35);display:grid;place-items:center}
-    .product-stage:before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:34px 34px}
-    .table-svg{width:92%;max-width:590px;position:relative;z-index:2;filter:drop-shadow(0 24px 28px rgba(0,0,0,.5))}
+
+    .hero-art{min-height:470px;display:flex;align-items:center;justify-content:center;position:relative;padding:0;overflow:visible}
+    .hero-art:after{content:"";position:absolute;left:12%;right:10%;bottom:5%;height:34px;background:radial-gradient(ellipse at center,rgba(0,0,0,.44),transparent 72%);filter:blur(9px);z-index:0}
+    .hero-product{position:relative;z-index:1;display:block;width:112%;max-width:720px;height:auto;object-fit:contain;filter:drop-shadow(0 24px 30px rgba(0,0,0,.32))}
+
     section{padding:92px 0}
-    .head{display:flex;justify-content:space-between;align-items:end;gap:36px;margin-bottom:38px}
-    .head h2{font-size:clamp(32px,4vw,48px);line-height:1.1;letter-spacing:-.035em;margin:8px 0 0}
-    .head p{max-width:520px;color:var(--muted);margin:0}
+    .section-head{display:flex;justify-content:space-between;align-items:end;gap:30px;margin-bottom:38px}
+    h2{font-size:clamp(30px,4vw,48px);line-height:1.1;letter-spacing:-.035em;margin:8px 0}
+    .section-head p{max-width:520px;color:var(--muted);margin:0}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-    .card{padding:28px;border:1px solid var(--line);background:var(--card);border-radius:18px;min-height:230px}
-    .num{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:#211b10;border:1px solid #5a4320;color:var(--gold);font-weight:900;margin-bottom:22px}
-    .card h3{margin:0 0 10px;font-size:20px}.card p{margin:0;color:var(--muted)}
-    .portfolio{background:#0f1317;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;min-height:230px}
+    .icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:#201b12;border:1px solid #4f3c1c;color:var(--accent);font-weight:800;margin-bottom:22px}
+    .card h3{font-size:20px;margin:0 0 10px}.card p{color:var(--muted);margin:0}
+
+    .work{background:#0e1317;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
     .gallery{display:grid;grid-template-columns:1.2fr .8fr .8fr;grid-template-rows:250px 250px;gap:16px}
-    .project{position:relative;overflow:hidden;border-radius:18px;border:1px solid #2b333b;background:linear-gradient(145deg,#1b2126,#111519);display:flex;align-items:end;padding:24px}
-    .project.big{grid-row:span 2;background:linear-gradient(145deg,#2a2016,#121517)}
-    .project:before{content:"";position:absolute;inset:16% 12% 34%;border:5px solid #3f4a52;transform:skewY(-5deg);opacity:.85}
-    .project.big:before{border-top-color:#a96f33}
-    .meta{position:relative;z-index:2}.meta b{display:block;font-size:20px}.meta span{font-size:13px;color:#bac3ca}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;counter-reset:steps}
-    .step{padding-right:20px}.step:before{counter-increment:steps;content:"0" counter(steps);display:block;color:var(--gold);font-weight:900;margin-bottom:14px;font-size:13px}
-    .step h3{margin:0 0 7px}.step p{margin:0;color:var(--muted);font-size:14px}
-    .cta{padding:54px;border:1px solid #403725;background:linear-gradient(135deg,#171b1f,#251d12);border-radius:24px;display:flex;align-items:center;justify-content:space-between;gap:30px}
-    .cta h2{font-size:clamp(30px,4vw,46px);letter-spacing:-.035em;line-height:1.1;margin:8px 0}.cta p{margin:0;color:#c4cbd0}
-    footer{padding:30px 0 46px;border-top:1px solid var(--line);color:#8d979f;font-size:13px}.foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
-    @media(max-width:900px){.navlinks{display:none}.hero-grid{grid-template-columns:1fr;gap:36px;min-height:auto}.product-stage{min-height:380px}.cards{grid-template-columns:1fr}.gallery{grid-template-columns:1fr;grid-template-rows:none}.project,.project.big{grid-row:auto;min-height:270px}.steps{grid-template-columns:1fr 1fr}.cta{flex-direction:column;align-items:flex-start}}
-    @media(max-width:560px){.wrap{width:min(var(--max),calc(100% - 28px))}.hero-grid{padding:58px 0}.product-stage{min-height:300px}section{padding:68px 0}.head{align-items:flex-start;flex-direction:column}.steps{grid-template-columns:1fr}.cta{padding:30px}.brand{font-size:16px}}
+    .project{position:relative;border-radius:18px;overflow:hidden;border:1px solid #2a3137;background:linear-gradient(145deg,#1c2329,#101417);padding:24px;display:flex;align-items:end}
+    .project.big{grid-row:span 2;background:linear-gradient(145deg,#261c14,#101315)}
+    .project .meta{position:relative;z-index:2}.project b{display:block;font-size:20px}.project small{color:#bdc5cb}
+    .project:before{content:"";position:absolute;inset:15% 12% 32%;border:6px solid #414a51;transform:skewY(-6deg);opacity:.8}
+    .project.big:before{inset:18% 14% 28%;border-top-color:#a86e36}
+
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+    .step{padding:8px 22px 0 0}
+    .step:before{counter-increment:step;content:"0" counter(step);display:block;color:var(--accent);font-weight:800;font-size:13px;margin-bottom:14px}
+    .step h3{margin:0 0 8px;font-size:18px}.step p{color:var(--muted);font-size:14px;margin:0}
+
+    .cta{background:linear-gradient(135deg,#171b1f,#241d13);border:1px solid #393226;border-radius:24px;padding:52px;display:flex;justify-content:space-between;align-items:center;gap:32px}
+    .cta h2{margin:0 0 10px}.cta p{margin:0;color:#c3c8cd}
+
+    footer{border-top:1px solid var(--line);padding:28px 0 44px;color:#8e989f;font-size:13px}
+    .foot{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+
+    @media(max-width:900px){
+      .navlinks{display:none}
+      .hero-grid{grid-template-columns:1fr;gap:36px;padding:68px 0}
+      .hero-art{min-height:360px}
+      .cards{grid-template-columns:1fr}
+      .gallery{grid-template-columns:1fr;grid-template-rows:none}
+      .project,.project.big{min-height:260px;grid-row:auto}
+      .steps{grid-template-columns:1fr 1fr}
+      .cta{flex-direction:column;align-items:flex-start}
+    }
+    @media(max-width:560px){
+      section{padding:68px 0}
+      .hero-grid{padding:56px 0}
+      .steps{grid-template-columns:1fr}
+      .section-head{flex-direction:column;align-items:flex-start}
+      .cta{padding:30px}
+      .brand{font-size:17px}
+      .hero-art{min-height:300px}
+      .hero-product{width:100%}
+    }
   </style>
 </head>
 <body>
 <header>
-  <div class="wrap"><nav>
-    <a class="brand" href="#inicio">CINARÉ <b>METAL</b></a>
-    <div class="navlinks"><a href="#servicos">Serviços</a><a href="#trabalhos">Trabalhos</a><a href="#processo">Como trabalhamos</a><a href="#contacto">Contacto</a></div>
-    <a class="btn primary" href="#contacto">Pedir orçamento</a>
-  </nav></div>
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="#inicio">CINARÉ <span>METAL</span></a>
+      <div class="navlinks">
+        <a href="#servicos">Serviços</a>
+        <a href="#trabalhos">Trabalhos</a>
+        <a href="#processo">Como trabalhamos</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+      <a class="btn primary" href="#contacto">Pedir orçamento</a>
+    </nav>
+  </div>
 </header>
 
 <main>
-  <section class="hero" id="inicio"><div class="wrap hero-grid">
-    <div>
-      <div class="eyebrow">Metal · Madeira · Interiores</div>
-      <h1>Peças feitas para durar. Projetos feitos à tua medida.</h1>
-      <p class="lead">Serralharia ligeira, mobiliário industrial e soluções por medida para casas, garagens e espaços comerciais.</p>
-      <div class="actions"><a class="btn primary" href="#contacto">Pedir orçamento</a><a class="btn secondary" href="#trabalhos">Ver trabalhos</a></div>
-    </div>
+  <section class="hero" id="inicio">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="eyebrow">Metal · Madeira · Interiores</div>
+        <h1>Peças feitas para durar. Projetos feitos à tua medida.</h1>
+        <p class="lead">Serralharia ligeira, mobiliário industrial e soluções por medida para casas, garagens e espaços comerciais.</p>
+        <div class="actions">
+          <a class="btn primary" href="#contacto">Pedir orçamento</a>
+          <a class="btn ghost" href="#trabalhos">Ver trabalhos</a>
+        </div>
+      </div>
 
-    <div class="product-stage" aria-label="Mesa de centro industrial CINARÉ">
-      <svg class="table-svg" viewBox="0 0 700 470" role="img" aria-label="Mesa de centro em aço preto e madeira escura">
-        <defs>
-          <linearGradient id="wood" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#7d4b25"/><stop offset=".25" stop-color="#4a2a18"/><stop offset=".55" stop-color="#986037"/><stop offset=".8" stop-color="#402417"/><stop offset="1" stop-color="#704421"/>
-          </linearGradient>
-          <linearGradient id="steel" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#313940"/><stop offset=".48" stop-color="#15191c"/><stop offset="1" stop-color="#3a4349"/>
-          </linearGradient>
-          <filter id="shadow" x="-20%" y="-20%" width="140%" height="160%"><feDropShadow dx="0" dy="18" stdDeviation="15" flood-color="#000" flood-opacity=".45"/></filter>
-        </defs>
-        <ellipse cx="356" cy="396" rx="240" ry="30" fill="#000" opacity=".26"/>
-        <g filter="url(#shadow)">
-          <polygon points="126,184 487,110 590,166 228,244" fill="url(#wood)" stroke="#171a1d" stroke-width="9"/>
-          <path d="M126 184L228 244M487 110L590 166" stroke="#0d1012" stroke-width="15" stroke-linecap="square"/>
-          <path d="M126 184L126 207L228 268L228 244" fill="#171b1e"/>
-          <path d="M228 244L590 166L590 189L228 268Z" fill="#20262a"/>
-          <g fill="none" stroke="url(#steel)" stroke-width="18" stroke-linecap="square">
-            <path d="M142 207L142 365L235 415"/>
-            <path d="M574 190L574 344L482 397"/>
-            <path d="M236 266L236 415"/>
-            <path d="M487 210L487 397"/>
-            <path d="M142 365L482 397"/>
-            <path d="M235 415L574 344"/>
-          </g>
-          <g opacity=".34" fill="none" stroke="#d39a5a" stroke-width="4">
-            <path d="M165 187C258 170 368 137 503 128"/><path d="M184 205C293 184 403 153 530 144"/><path d="M213 220C306 199 427 170 551 157"/>
-          </g>
-          <g fill="#1c120c" opacity=".65"><ellipse cx="270" cy="180" rx="17" ry="7" transform="rotate(-13 270 180)"/><ellipse cx="423" cy="149" rx="13" ry="6" transform="rotate(-11 423 149)"/></g>
-        </g>
-      </svg>
+      <div class="hero-art" aria-label="Mesa de centro industrial CINARÉ">
+        <img class="hero-product" src="./images/mesa-centro.webp?v=1" alt="Mesa de centro CINARÉ com estrutura metálica preta e madeira queimada">
+      </div>
     </div>
-  </div></section>
+  </section>
 
-  <section id="servicos"><div class="wrap">
-    <div class="head"><div><div class="eyebrow">O que fazemos</div><h2>Do desenho à peça final.</h2></div><p>Projetos simples ou totalmente personalizados, com foco em resistência, acabamento e funcionalidade.</p></div>
-    <div class="cards">
-      <article class="card"><div class="num">01</div><h3>Mobiliário industrial</h3><p>Mesas de centro, secretárias, estantes, consolas e peças em aço e madeira feitas por medida.</p></article>
-      <article class="card"><div class="num">02</div><h3>Serralharia por medida</h3><p>Estruturas metálicas, suportes, portões, guardas e soluções para interior ou exterior.</p></article>
-      <article class="card"><div class="num">03</div><h3>Interiores</h3><p>Integração de metal, madeira e acabamentos para criar peças modernas e funcionais.</p></article>
+  <section id="servicos">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">O que fazemos</div>
+          <h2>Do desenho à peça final.</h2>
+        </div>
+        <p>Uma apresentação simples dos principais serviços. Num site real, cada área pode ter fotografias, preços indicativos e formulário próprio.</p>
+      </div>
+      <div class="cards">
+        <article class="card"><div class="icon">01</div><h3>Mobiliário industrial</h3><p>Mesas de centro, secretárias, estantes, consolas e peças em aço e madeira produzidas por medida.</p></article>
+        <article class="card"><div class="icon">02</div><h3>Serralharia por medida</h3><p>Estruturas metálicas, suportes, portões, guardas, pequenas construções e soluções personalizadas.</p></article>
+        <article class="card"><div class="icon">03</div><h3>Interiores</h3><p>Integração de metal, madeira e acabamentos para criar soluções modernas, resistentes e funcionais.</p></article>
+      </div>
     </div>
-  </div></section>
+  </section>
 
-  <section class="portfolio" id="trabalhos"><div class="wrap">
-    <div class="head"><div><div class="eyebrow">Portefólio</div><h2>Alguns trabalhos.</h2></div><p>Esta área fica preparada para receber fotografias reais dos projetos à medida que forem sendo concluídos.</p></div>
-    <div class="gallery">
-      <div class="project big"><div class="meta"><b>Mesa de centro</b><span>Aço lacado + madeira</span></div></div>
-      <div class="project"><div class="meta"><b>Suporte para vinho</b><span>Aço · Série pequena</span></div></div>
-      <div class="project"><div class="meta"><b>Consola industrial</b><span>Aço + madeira</span></div></div>
-      <div class="project"><div class="meta"><b>Suporte para vasos</b><span>Interior / exterior</span></div></div>
-      <div class="project"><div class="meta"><b>Projeto por medida</b><span>Desenho e fabrico</span></div></div>
+  <section class="work" id="trabalhos">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Portefólio</div><h2>Alguns trabalhos.</h2></div>
+        <p>Estas caixas seriam substituídas pelas fotografias reais dos teus projetos.</p>
+      </div>
+      <div class="gallery">
+        <div class="project big"><div class="meta"><b>Mesa de centro</b><small>Aço lacado + madeira maciça</small></div></div>
+        <div class="project"><div class="meta"><b>Suporte para vinho</b><small>Aço · Série pequena</small></div></div>
+        <div class="project"><div class="meta"><b>Consola industrial</b><small>Aço + madeira</small></div></div>
+        <div class="project"><div class="meta"><b>Suporte para vasos</b><small>Interior / exterior</small></div></div>
+        <div class="project"><div class="meta"><b>Projeto por medida</b><small>Desenho e fabrico</small></div></div>
+      </div>
     </div>
-  </div></section>
+  </section>
 
-  <section id="processo"><div class="wrap">
-    <div class="head"><div><div class="eyebrow">Processo</div><h2>Simples e transparente.</h2></div></div>
-    <div class="steps">
-      <div class="step"><h3>Pedido</h3><p>Envias a ideia, medidas, fotografias ou um esboço.</p></div>
-      <div class="step"><h3>Proposta</h3><p>Definimos materiais, acabamento, dimensões e preço.</p></div>
-      <div class="step"><h3>Fabrico</h3><p>A peça é preparada, soldada, acabada e verificada.</p></div>
-      <div class="step"><h3>Entrega</h3><p>Combinamos levantamento, entrega ou montagem.</p></div>
+  <section id="processo">
+    <div class="wrap">
+      <div class="section-head">
+        <div><div class="eyebrow">Processo</div><h2>Simples e transparente.</h2></div>
+      </div>
+      <div class="steps">
+        <div class="step"><h3>Pedido</h3><p>Envias uma ideia, medidas, fotografias ou um esboço.</p></div>
+        <div class="step"><h3>Proposta</h3><p>Definimos materiais, acabamento, dimensões e preço.</p></div>
+        <div class="step"><h3>Fabrico</h3><p>A peça é preparada, soldada, acabada e verificada.</p></div>
+        <div class="step"><h3>Entrega</h3><p>Combinamos levantamento, entrega ou montagem.</p></div>
+      </div>
     </div>
-  </div></section>
+  </section>
 
-  <section id="contacto"><div class="wrap"><div class="cta">
-    <div><div class="eyebrow">Tens uma ideia?</div><h2>Transformamos o teu desenho numa peça real.</h2><p>O contacto pode depois ser ligado ao WhatsApp, email ou formulário de orçamento.</p></div>
-    <a class="btn primary" href="mailto:exemplo@cinare.pt?subject=Pedido%20de%20orçamento">Pedir orçamento</a>
-  </div></div></section>
+  <section id="contacto">
+    <div class="wrap">
+      <div class="cta">
+        <div>
+          <div class="eyebrow">Tens uma ideia?</div>
+          <h2>Transformamos o teu desenho numa peça real.</h2>
+          <p>Este botão pode abrir WhatsApp, email ou um formulário de orçamento.</p>
+        </div>
+        <a class="btn primary" href="mailto:exemplo@cinare.pt?subject=Pedido%20de%20orçamento">Pedir orçamento</a>
+      </div>
+    </div>
+  </section>
 </main>
 
-<footer><div class="wrap foot"><div>© 2026 CINARÉ Metal & Interiores</div><div>Barcelos · Portugal</div></div></footer>
+<footer>
+  <div class="wrap foot">
+    <div>© 2026 CINARÉ Metal & Interiores</div>
+    <div>Barcelos · Portugal</div>
+  </div>
+</footer>
 </body>
 </html>
