@@ -1,7 +1,7 @@
 name: Converter WebP para JPG e limpar
 
 on:
-  issues:
+  pull_request:
     types: [opened]
 
 permissions:
@@ -9,10 +9,10 @@ permissions:
 
 jobs:
   converter:
-    if: github.event.issue.title == 'RUN JPG CONVERSION'
+    if: github.head_ref == 'jpg-conversion-trigger'
     runs-on: ubuntu-latest
     steps:
-      - name: Obter repositório
+      - name: Obter main
         uses: actions/checkout@v4
         with:
           ref: main
@@ -46,7 +46,7 @@ jobs:
       - name: Remover automação temporária
         run: rm -f .github/workflows/converter-webp-para-jpg.yml
 
-      - name: Guardar alterações
+      - name: Guardar alterações no main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
