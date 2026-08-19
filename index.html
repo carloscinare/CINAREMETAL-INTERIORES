@@ -58,6 +58,7 @@
     .service-card-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
     .service-card-content{position:relative;z-index:2;width:100%;padding:22px}
     .card.with-photo .icon{position:absolute;z-index:3;top:18px;left:18px;margin:0;background:rgba(32,27,18,.82);backdrop-filter:blur(5px)}
+    .service-link{color:inherit;text-decoration:none;cursor:pointer;transition:.2s}.service-link:hover{transform:translateY(-3px);border-color:#4b555e}
     .card.with-photo h3{font-size:22px;color:#fff;margin:0 0 8px}
     .card.with-photo p{color:#d6dde2;margin:0;max-width:32ch}
     .icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:#201b12;border:1px solid #4f3c1c;color:var(--accent);font-weight:800;margin-bottom:22px}
@@ -154,14 +155,14 @@
         <p>Uma apresentação simples dos principais serviços. Num site real, cada área pode ter fotografias, preços indicativos e formulário próprio.</p>
       </div>
       <div class="cards">
-        <article class="card with-photo">
+        <a class="card with-photo service-link" href="./mobiliario-industrial.html" aria-label="Ver galeria de mobiliário industrial">
           <img class="service-card-image" src="./mobiliario-industrial.png?v=2" alt="Mobiliário industrial em metal e madeira">
           <div class="icon">01</div>
           <div class="service-card-content">
             <h3>Mobiliário industrial</h3>
             <p>Mesas de centro, secretárias, estantes, consolas e peças em aço e madeira produzidas por medida.</p>
           </div>
-        </article>
+        </a>
         <article class="card"><div class="icon">02</div><h3>Serralharia por medida</h3><p>Estruturas metálicas, suportes, portões, guardas, pequenas construções e soluções personalizadas.</p></article>
         <article class="card"><div class="icon">03</div><h3>Interiores</h3><p>Integração de metal, madeira e acabamentos para criar soluções modernas, resistentes e funcionais.</p></article>
       </div>
