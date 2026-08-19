@@ -1,0 +1,50 @@
+name: Atualizar cartão mobiliário
+
+on:
+  push:
+    paths:
+      - '.github/workflows/update-mobiliario-card.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update-card:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Atualizar index.html
+        shell: bash
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          path = Path('index.html')
+          text = path.read_text(encoding='utf-8')
+
+          css_anchor = '.card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;min-height:230px}'
+          css_extra = '''\n    .card.with-photo{padding:18px}\n    .service-card-image{width:100%;height:160px;object-fit:cover;border-radius:12px;margin:0 0 18px;display:block}'''
+          if '.service-card-image{' not in text:
+              text = text.replace(css_anchor, css_anchor + css_extra)
+
+          old = '<article class="card"><div class="icon">01</div><h3>Mobiliário industrial</h3><p>Mesas de centro, secretárias, estantes, consolas e peças em aço e madeira produzidas por medida.</p></article>'
+          new = '''<article class="card with-photo">\n          <img class="service-card-image" src="./mobiliario-industrial.png?v=1" alt="Mobiliário industrial em metal e madeira">\n          <div class="icon">01</div>\n          <h3>Mobiliário industrial</h3>\n          <p>Mesas de centro, secretárias, estantes, consolas e peças em aço e madeira produzidas por medida.</p>\n        </article>'''
+          if old in text:
+              text = text.replace(old, new)
+
+          path.write_text(text, encoding='utf-8')
+          PY
+
+      - name: Commit da alteração
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add index.html
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteração necessária"
+          else
+            git commit -m "Usar imagem no cartão Mobiliário industrial"
+            git push
+          fi
