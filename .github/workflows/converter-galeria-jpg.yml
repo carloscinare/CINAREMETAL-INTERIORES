@@ -21,3 +21,5 @@ jobs:
           git add mobiliario-industrial.html galeria/*.jpg
           git commit -m "Converter imagens da galeria para JPG"
           git push
+
+# trigger 2
