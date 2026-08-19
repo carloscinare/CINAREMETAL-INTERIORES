@@ -53,8 +53,13 @@
     .section-head p{max-width:520px;color:var(--muted);margin:0}
     .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px;min-height:230px}
-    .card.with-photo{padding:18px}
-    .service-card-image{width:100%;height:160px;object-fit:cover;border-radius:12px;margin:0 0 18px;display:block}
+    .card.with-photo{padding:0;position:relative;overflow:hidden;min-height:300px;display:flex;align-items:flex-end}
+    .card.with-photo:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(6,9,11,.04) 15%,rgba(6,9,11,.18) 48%,rgba(6,9,11,.94) 100%);z-index:1;pointer-events:none}
+    .service-card-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;z-index:0}
+    .service-card-content{position:relative;z-index:2;width:100%;padding:22px}
+    .card.with-photo .icon{position:absolute;z-index:3;top:18px;left:18px;margin:0;background:rgba(32,27,18,.82);backdrop-filter:blur(5px)}
+    .card.with-photo h3{font-size:22px;color:#fff;margin:0 0 8px}
+    .card.with-photo p{color:#d6dde2;margin:0;max-width:32ch}
     .icon{width:48px;height:48px;border-radius:12px;display:grid;place-items:center;background:#201b12;border:1px solid #4f3c1c;color:var(--accent);font-weight:800;margin-bottom:22px}
     .card h3{font-size:20px;margin:0 0 10px}.card p{color:var(--muted);margin:0}
 
@@ -150,10 +155,12 @@
       </div>
       <div class="cards">
         <article class="card with-photo">
-          <img class="service-card-image" src="./mobiliario-industrial.png?v=1" alt="Mobiliário industrial em metal e madeira">
+          <img class="service-card-image" src="./mobiliario-industrial.png?v=2" alt="Mobiliário industrial em metal e madeira">
           <div class="icon">01</div>
-          <h3>Mobiliário industrial</h3>
-          <p>Mesas de centro, secretárias, estantes, consolas e peças em aço e madeira produzidas por medida.</p>
+          <div class="service-card-content">
+            <h3>Mobiliário industrial</h3>
+            <p>Mesas de centro, secretárias, estantes, consolas e peças em aço e madeira produzidas por medida.</p>
+          </div>
         </article>
         <article class="card"><div class="icon">02</div><h3>Serralharia por medida</h3><p>Estruturas metálicas, suportes, portões, guardas, pequenas construções e soluções personalizadas.</p></article>
         <article class="card"><div class="icon">03</div><h3>Interiores</h3><p>Integração de metal, madeira e acabamentos para criar soluções modernas, resistentes e funcionais.</p></article>
