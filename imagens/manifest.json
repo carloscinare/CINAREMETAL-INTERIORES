@@ -1,0 +1,302 @@
+{
+  "mesa-centro": {
+    "source": "mesa-centro.png",
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "width": 320,
+        "height": 240,
+        "path": "imagens/mesa-centro-a504366f-320.webp"
+      },
+      {
+        "width": 640,
+        "height": 480,
+        "path": "imagens/mesa-centro-a504366f-640.webp"
+      },
+      {
+        "width": 960,
+        "height": 720,
+        "path": "imagens/mesa-centro-a504366f-960.webp"
+      },
+      {
+        "width": 1280,
+        "height": 960,
+        "path": "imagens/mesa-centro-a504366f-1280.webp"
+      },
+      {
+        "width": 1448,
+        "height": 1086,
+        "path": "imagens/mesa-centro-a504366f-1448.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/mesa-centro-a504366f-partilha.jpg",
+      "width": 1200,
+      "height": 900
+    }
+  },
+  "consola-industrial": {
+    "source": "galeria/estante-industrial.jpg",
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "width": 320,
+        "height": 240,
+        "path": "imagens/consola-industrial-3e8d62cb-320.webp"
+      },
+      {
+        "width": 640,
+        "height": 480,
+        "path": "imagens/consola-industrial-3e8d62cb-640.webp"
+      },
+      {
+        "width": 960,
+        "height": 720,
+        "path": "imagens/consola-industrial-3e8d62cb-960.webp"
+      },
+      {
+        "width": 1280,
+        "height": 960,
+        "path": "imagens/consola-industrial-3e8d62cb-1280.webp"
+      },
+      {
+        "width": 1448,
+        "height": 1086,
+        "path": "imagens/consola-industrial-3e8d62cb-1448.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/consola-industrial-3e8d62cb-partilha.jpg",
+      "width": 1200,
+      "height": 900
+    }
+  },
+  "estante-industrial": {
+    "source": "galeria/estante-industrial-fea91459.png",
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "width": 320,
+        "height": 240,
+        "path": "imagens/estante-industrial-1230ae06-320.webp"
+      },
+      {
+        "width": 640,
+        "height": 480,
+        "path": "imagens/estante-industrial-1230ae06-640.webp"
+      },
+      {
+        "width": 960,
+        "height": 720,
+        "path": "imagens/estante-industrial-1230ae06-960.webp"
+      },
+      {
+        "width": 1280,
+        "height": 960,
+        "path": "imagens/estante-industrial-1230ae06-1280.webp"
+      },
+      {
+        "width": 1448,
+        "height": 1086,
+        "path": "imagens/estante-industrial-1230ae06-1448.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/estante-industrial-1230ae06-partilha.jpg",
+      "width": 1200,
+      "height": 900
+    }
+  },
+  "mesa-apoio": {
+    "source": "galeria/mesa-apoio-nova.jpg",
+    "width": 872,
+    "height": 900,
+    "variants": [
+      {
+        "width": 320,
+        "height": 330,
+        "path": "imagens/mesa-apoio-13d93145-320.webp"
+      },
+      {
+        "width": 640,
+        "height": 661,
+        "path": "imagens/mesa-apoio-13d93145-640.webp"
+      },
+      {
+        "width": 872,
+        "height": 900,
+        "path": "imagens/mesa-apoio-13d93145-872.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/mesa-apoio-13d93145-partilha.jpg",
+      "width": 872,
+      "height": 900
+    }
+  },
+  "suporte-planta": {
+    "source": "galeria/suporte-planta.jpg",
+    "width": 400,
+    "height": 400,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "path": "imagens/suporte-planta-6e34d3e1-320.webp"
+      },
+      {
+        "width": 400,
+        "height": 400,
+        "path": "imagens/suporte-planta-6e34d3e1-400.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/suporte-planta-6e34d3e1-partilha.jpg",
+      "width": 400,
+      "height": 400
+    }
+  },
+  "prateleira-parede": {
+    "source": "galeria/prateleira-parede-nova.jpg",
+    "width": 400,
+    "height": 300,
+    "variants": [
+      {
+        "width": 320,
+        "height": 240,
+        "path": "imagens/prateleira-parede-bac2b940-320.webp"
+      },
+      {
+        "width": 400,
+        "height": 300,
+        "path": "imagens/prateleira-parede-bac2b940-400.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/prateleira-parede-bac2b940-partilha.jpg",
+      "width": 400,
+      "height": 300
+    }
+  },
+  "porta-revistas": {
+    "source": "galeria/porta-revistas.jpg",
+    "width": 400,
+    "height": 400,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "path": "imagens/porta-revistas-eed643ad-320.webp"
+      },
+      {
+        "width": 400,
+        "height": 400,
+        "path": "imagens/porta-revistas-eed643ad-400.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/porta-revistas-eed643ad-partilha.jpg",
+      "width": 400,
+      "height": 400
+    }
+  },
+  "banco-sapateira": {
+    "source": "galeria/banco-sapateira-novo.jpg",
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "width": 320,
+        "height": 240,
+        "path": "imagens/banco-sapateira-3815e8a0-320.webp"
+      },
+      {
+        "width": 640,
+        "height": 480,
+        "path": "imagens/banco-sapateira-3815e8a0-640.webp"
+      },
+      {
+        "width": 960,
+        "height": 720,
+        "path": "imagens/banco-sapateira-3815e8a0-960.webp"
+      },
+      {
+        "width": 1280,
+        "height": 960,
+        "path": "imagens/banco-sapateira-3815e8a0-1280.webp"
+      },
+      {
+        "width": 1448,
+        "height": 1086,
+        "path": "imagens/banco-sapateira-3815e8a0-1448.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/banco-sapateira-3815e8a0-partilha.jpg",
+      "width": 1200,
+      "height": 900
+    }
+  },
+  "banco-alto": {
+    "source": "galeria/banco-alto-novo.jpg",
+    "width": 400,
+    "height": 400,
+    "variants": [
+      {
+        "width": 320,
+        "height": 320,
+        "path": "imagens/banco-alto-618885f7-320.webp"
+      },
+      {
+        "width": 400,
+        "height": 400,
+        "path": "imagens/banco-alto-618885f7-400.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/banco-alto-618885f7-partilha.jpg",
+      "width": 400,
+      "height": 400
+    }
+  },
+  "portao-metal-madeira": {
+    "source": "portao-metal-madeira-77cf45df.png",
+    "width": 1448,
+    "height": 1086,
+    "variants": [
+      {
+        "width": 320,
+        "height": 240,
+        "path": "imagens/portao-metal-madeira-e41456f3-320.webp"
+      },
+      {
+        "width": 640,
+        "height": 480,
+        "path": "imagens/portao-metal-madeira-e41456f3-640.webp"
+      },
+      {
+        "width": 960,
+        "height": 720,
+        "path": "imagens/portao-metal-madeira-e41456f3-960.webp"
+      },
+      {
+        "width": 1280,
+        "height": 960,
+        "path": "imagens/portao-metal-madeira-e41456f3-1280.webp"
+      },
+      {
+        "width": 1448,
+        "height": 1086,
+        "path": "imagens/portao-metal-madeira-e41456f3-1448.webp"
+      }
+    ],
+    "social": {
+      "path": "imagens/portao-metal-madeira-e41456f3-partilha.jpg",
+      "width": 1200,
+      "height": 900
+    }
+  }
+}

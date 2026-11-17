@@ -1,0 +1,137 @@
+[
+  {
+    "id": "mesa-centro",
+    "name": "Mesa de centro",
+    "category": "mesas",
+    "material": "Aço e madeira",
+    "details": "Um modelo de linhas simples que combina metal e madeira. Partilha as medidas do teu espaço para definirmos as dimensões e o acabamento.",
+    "source": "mesa-centro.png",
+    "description": "Uma peça central para a sala, com estrutura metálica e tampo em madeira.",
+    "categoryLabel": "Mesas e consolas",
+    "related": [
+      "mesa-apoio",
+      "estante-industrial",
+      "consola-industrial"
+    ]
+  },
+  {
+    "id": "consola-industrial",
+    "name": "Consola industrial",
+    "category": "mesas",
+    "material": "Aço e madeira",
+    "details": "Uma proposta para a entrada, sala ou corredor, com prateleira inferior. As medidas, o tom da madeira e a cor da estrutura são definidos no orçamento.",
+    "source": "galeria/estante-industrial.jpg",
+    "description": "Consola com prateleira inferior e travamento cruzado.",
+    "categoryLabel": "Mesas e consolas",
+    "related": [
+      "estante-industrial",
+      "banco-sapateira",
+      "prateleira-parede"
+    ]
+  },
+  {
+    "id": "estante-industrial",
+    "name": "Estante industrial",
+    "category": "arrumacao",
+    "material": "Aço e madeira",
+    "details": "Uma estante aberta para sala, entrada ou escritório. Podemos conversar sobre o espaço disponível, a utilização pretendida e o acabamento.",
+    "source": "galeria/estante-industrial-fea91459.png",
+    "description": "Três níveis para livros, objetos e peças de decoração.",
+    "categoryLabel": "Arrumação",
+    "related": [
+      "consola-industrial",
+      "prateleira-parede",
+      "mesa-centro"
+    ]
+  },
+  {
+    "id": "mesa-apoio",
+    "name": "Mesa de apoio",
+    "category": "mesas",
+    "material": "Aço e madeira",
+    "details": "Uma proposta para ter junto ao sofá ou num canto de leitura. Indica as medidas desejadas para adaptarmos o modelo ao teu espaço.",
+    "source": "galeria/mesa-apoio-nova.jpg",
+    "description": "Mesa lateral compacta, com prateleira inferior.",
+    "categoryLabel": "Mesas e consolas",
+    "related": [
+      "mesa-centro",
+      "suporte-planta",
+      "porta-revistas"
+    ]
+  },
+  {
+    "id": "suporte-planta",
+    "name": "Suporte para planta",
+    "category": "decoracao",
+    "material": "Aço e madeira",
+    "details": "Uma ideia de suporte com estrutura metálica e caixa em madeira. O tamanho e o acabamento são combinados de acordo com a utilização pretendida.",
+    "source": "galeria/suporte-planta.jpg",
+    "description": "Uma estrutura geométrica para dar destaque às plantas.",
+    "categoryLabel": "Decoração",
+    "related": [
+      "prateleira-parede",
+      "mesa-apoio",
+      "porta-revistas"
+    ]
+  },
+  {
+    "id": "prateleira-parede",
+    "name": "Prateleira de parede",
+    "category": "arrumacao",
+    "material": "Aço e madeira",
+    "details": "Uma solução para expor livros e objetos sem ocupar o chão. Partilha o comprimento pretendido e o tipo de parede para avaliarmos a solução.",
+    "source": "galeria/prateleira-parede-nova.jpg",
+    "description": "Prateleira suspensa com suportes metálicos.",
+    "categoryLabel": "Arrumação",
+    "related": [
+      "estante-industrial",
+      "consola-industrial",
+      "suporte-planta"
+    ]
+  },
+  {
+    "id": "porta-revistas",
+    "name": "Porta-revistas",
+    "category": "decoracao",
+    "material": "Aço e couro",
+    "details": "Um modelo de inspiração industrial para ter junto ao sofá ou numa zona de leitura. Os materiais e acabamentos finais são definidos contigo no orçamento.",
+    "source": "galeria/porta-revistas.jpg",
+    "description": "Uma proposta de arrumação para revistas e livros.",
+    "categoryLabel": "Decoração",
+    "related": [
+      "mesa-apoio",
+      "mesa-centro",
+      "estante-industrial"
+    ]
+  },
+  {
+    "id": "banco-sapateira",
+    "name": "Banco sapateira",
+    "category": "bancos",
+    "material": "Aço e madeira",
+    "details": "Combina um tampo em madeira com uma prateleira metálica para calçado. Partilha a largura disponível para definirmos a peça à tua medida.",
+    "source": "galeria/banco-sapateira-novo.jpg",
+    "description": "Um banco para a entrada, com espaço para o calçado.",
+    "categoryLabel": "Bancos",
+    "related": [
+      "consola-industrial",
+      "prateleira-parede",
+      "banco-alto"
+    ]
+  },
+  {
+    "id": "banco-alto",
+    "name": "Banco alto",
+    "category": "bancos",
+    "material": "Aço e madeira",
+    "details": "Uma proposta de banco alto em metal e madeira. A altura da bancada e o uso pretendido ajudam a definir as dimensões e o acabamento.",
+    "source": "galeria/banco-alto-novo.jpg",
+    "description": "Um modelo para cozinhas, bancadas e espaços comerciais.",
+    "categoryLabel": "Bancos",
+    "related": [
+      "mesa-apoio",
+      "banco-sapateira",
+      "consola-industrial"
+    ]
+  }
+]

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://carloscinare.github.io/CINAREMETAL-INTERIORES/sitemap.xml
